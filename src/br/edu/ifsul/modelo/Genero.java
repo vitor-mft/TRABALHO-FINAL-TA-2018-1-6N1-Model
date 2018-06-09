@@ -27,9 +27,11 @@ import org.hibernate.validator.constraints.NotBlank;
 public class Genero implements Serializable {
 
     @Id
-    @SequenceGenerator(name = "seq_genero", sequenceName = "seq_genero_id",allocationSize = 1)
+    @SequenceGenerator(name = "seq_genero", sequenceName = "seq_genero_id"
+            ,allocationSize = 1)
     @GeneratedValue(generator = "seq_genero", strategy = GenerationType.SEQUENCE)
     private Integer id;
+   
 
     @NotNull(message = "O nome não pode ser nulo")
     @NotBlank(message = "O nome não pode ser em branco")
