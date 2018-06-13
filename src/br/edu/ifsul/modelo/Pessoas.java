@@ -58,7 +58,7 @@ public class Pessoas implements Serializable {
     private String senha;
     
     
-     @ManyToMany
+    @ManyToMany
     @JoinTable(name = "tipos",
             joinColumns
             = @JoinColumn(name = "pessoas", referencedColumnName = "apelido", nullable = false),
